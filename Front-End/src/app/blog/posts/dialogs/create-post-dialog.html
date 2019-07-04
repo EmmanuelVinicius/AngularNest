@@ -1,0 +1,17 @@
+<form #form="ngForm">
+    <mat-form-field>
+        <input matInput placeholder="Title">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Subitle">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Image URL">
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput placeholder="Content"></textarea>
+    </mat-form-field>
+    <button (click)="submit(form)" [disabled]="!form.valid">
+        Submit
+    </button>
+</form>
