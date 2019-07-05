@@ -16,6 +16,7 @@ export class CreatePostDialogComponent {
     constructor(private dialogRef: MatDialogRef<CreatePostDialogComponent>, private postService: PostService) { }
 
     public submit(form: NgForm){
+        console.log(form);
         if(form.valid){
             this.isLoading = true;
             this.postService.createPost(this.newPostModel)
