@@ -1,24 +1,30 @@
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatButtonModule, MatTableModule, MatProgressBarModule, MatDialog, MatDialogModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatTableModule, MatProgressBarModule, MatDialog, MatDialogModule, MatInputModule, MatFormFieldModule, MatIconModule, MatTooltipModule, MatSnackBarModule } from '@angular/material';
 
 @NgModule({
     imports: [
         MatCardModule,
-        MatButtonModule,
         MatTableModule,
         MatProgressBarModule,
+        MatIconModule,
         MatDialogModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatTooltipModule,
+        MatSnackBarModule,
+        MatButtonModule
     ],
     exports: [
         MatCardModule,
-        MatButtonModule,
         MatTableModule,
         MatProgressBarModule,
+        MatIconModule,
         MatDialogModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatTooltipModule,
+        MatSnackBarModule,
+        MatButtonModule
     ],
     declarations: [],
     providers: [],

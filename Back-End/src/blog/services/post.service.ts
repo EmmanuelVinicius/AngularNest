@@ -1,3 +1,4 @@
+import { EditPostDto } from './../dto/edit.post.dto';
 import { PostEntity } from './../post/post.entity';
 import { CreatePostDto } from '../dto/create.post.dto';
 import { Injectable } from '@nestjs/common';
@@ -17,7 +18,16 @@ export class PostService {
             map((posts) => _.orderBy(posts, ['id'], ['asc']))
         )
     }
+
     public create(createPostDto: CreatePostDto): Promise<PostDto> {
         return this.postRepository.save(createPostDto);
+    }
+
+    public edit(editPostDto: EditPostDto): Promise<PostDto> {
+        return this.postRepository.save(editPostDto);
+    }
+
+    public delete(postId: number): void{
+        this.postRepository.delete(postId);
     }
 }

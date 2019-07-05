@@ -3,32 +3,35 @@
 <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <mat-form-field class="w100">
-                    <input matInput name="title" placeholder="Title" [(ngModel)]="newPostModel.title">
+                <mat-form-field class="w-100">
+                    <input matInput required name="title" placeholder="Title" [(ngModel)]="postModel.title">
                 </mat-form-field>
             </div>
             <div class="col-6">
-                <mat-form-field class="w100">
-                    <input matInput name="subtitle" placeholder="Subitle" [(ngModel)]="newPostModel.subtitle">
+                <mat-form-field class="w-100">
+                    <input matInput required name="subtitle" placeholder="Subitle" [(ngModel)]="postModel.subtitle">
                 </mat-form-field>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <mat-form-field class="w100">
-                    <input matInput name="imageURL" placeholder="Image URL" [(ngModel)]="newPostModel.imageURL">
+                <mat-form-field class="w-100">
+                    <input matInput required name="imageURL" placeholder="Image URL" [(ngModel)]="postModel.imageURL">
                 </mat-form-field>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <mat-form-field class="w100">
-                    <textarea matInput name="content" placeholder="Content" [(ngModel)]="newPostModel.content"></textarea>
+                <mat-form-field class="w-100">
+                    <textarea matInput required name="content" placeholder="Content" [(ngModel)]="postModel.content"></textarea>
                 </mat-form-field>
             </div>
         </div>
-        <button matButton (click)="submit(form)" [disabled]="!form.valid">
-            Submit
-        </button>
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button (click)="submit(form)" [disabled]="!form.valid">
+                Submit
+            </button>
+        </mat-dialog-actions>
     </div>
 </form>

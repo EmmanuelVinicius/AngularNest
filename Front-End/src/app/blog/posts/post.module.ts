@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
         FormsModule,
     ],
     exports: [
+        CommonMaterialModule,
         PostListModule
     ],
     declarations: [

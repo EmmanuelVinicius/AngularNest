@@ -1,0 +1,28 @@
+<mat-card class="container w-50">
+    <form #form="ngForm">
+
+        <mat-card-header>
+            <h1 class="pb-5">Login</h1>
+        </mat-card-header>
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field class=" w-100">
+                    <input required matInput name="email" [(ngModel)]="user.email" placeholder="Username" type="text">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <mat-form-field class=" w-100">
+                    <input required matInput name="password" [(ngModel)]="user.password" placeholder="Password" type="password">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button [disabled]="isLoading" class=" w-100" mat-raised-button color="primary" (click)="onSubmit(form)">Login</button>
+            </div>
+        </div>
+    </form>
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+</mat-card>
