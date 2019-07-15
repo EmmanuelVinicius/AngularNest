@@ -5,9 +5,9 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { MatDialog } from '@angular/material';
-import { CreatePostDialogComponent } from '../dialogs/create-post-dialog.component';
 import * as _ from 'lodash';
 import { ConfirmationDialogComponent } from '../../dialog/confirmation-dialog.component';
+import { CreatePostDialogComponent } from '../dialogs/create-post-dialog.component';
 
 @Component({
     selector: 'app-post-list',
